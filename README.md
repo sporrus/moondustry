@@ -1,2 +1,2 @@
-# luaMod
-uhhh lua mods for mindustry 
+# moondustry
+lua mod loader for mindustry
