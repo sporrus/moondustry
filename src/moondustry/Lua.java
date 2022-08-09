@@ -12,7 +12,7 @@ import org.luaj.vm2.lib.jse.*;
 public class Lua {
     public static void infuseGlobals(Globals globals) {
         globals.set("Log", CoerceJavaToLua.coerce(Log.class));
-        globals.set("Vars", CoerceJavaToLua.coerce(Vars.class))
+        globals.set("Vars", CoerceJavaToLua.coerce(Vars.class));
         globals.set("Events", CoerceJavaToLua.coerce(Events.class));
         globals.set("EventType", CoerceJavaToLua.coerce(EventType.class));
         globals.set("WorldLoadEvent", CoerceJavaToLua.coerce(EventType.WorldLoadEvent.class));
