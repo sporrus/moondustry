@@ -6,15 +6,21 @@ import arc.util.*;
 import mindustry.*;
 import mindustry.content.*;
 import mindustry.game.*;
+import mindustry.world.*;
+import mindustry.world.consumers.*;
+import mindustry.world.meta.*;
 import org.luaj.vm2.*;
 import org.luaj.vm2.lib.*;
 import org.luaj.vm2.lib.jse.*;
+
+import java.math.*;
 
 public class Lua {
     public static void infuseGlobals(Globals globals) {
         globals.set("Log", CoerceJavaToLua.coerce(Log.class));
         globals.set("Items", CoerceJavaToLua.coerce(Items.class));
         globals.set("Blocks", CoerceJavaToLua.coerce(Blocks.class));
+        globals.set("Block", CoerceJavaToLua.coerce(Block.class));
         globals.set("Liquids", CoerceJavaToLua.coerce(Liquids.class));
         globals.set("UnitTypes", CoerceJavaToLua.coerce(UnitTypes.class));
         globals.set("Vars", CoerceJavaToLua.coerce(Vars.class));
@@ -22,6 +28,8 @@ public class Lua {
         globals.set("Events", CoerceJavaToLua.coerce(Events.class));
         globals.set("EventType", CoerceJavaToLua.coerce(EventType.class));
         globals.set("WorldLoadEvent", CoerceJavaToLua.coerce(EventType.WorldLoadEvent.class));
+        globals.set("Stats", CoerceJavaToLua.coerce(Stats.class));
+        globals.set("ConsumeLiquidFilter", CoerceJavaToLua.coerce(ConsumeLiquidFilter.class));
         globals.set("run", new LibFunction() {
             @Override
             public LuaValue call(LuaValue a) {
