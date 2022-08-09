@@ -13,6 +13,7 @@ public class LuaMod {
     public LuaMod(Fi root) {
         this.root = root;
         Lua.infuseGlobals(globals);
+        globals.load("package.path = '" + root.absolutePath() + "/?.lua'").call();
         main = globals.loadfile(this.root.child("main.lua").absolutePath());
         main.call();
     }
