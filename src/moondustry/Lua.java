@@ -4,6 +4,7 @@ import arc.*;
 import arc.func.*;
 import arc.util.*;
 import mindustry.*;
+import mindustry.content.*;
 import mindustry.game.*;
 import org.luaj.vm2.*;
 import org.luaj.vm2.lib.*;
@@ -12,6 +13,9 @@ import org.luaj.vm2.lib.jse.*;
 public class Lua {
     public static void infuseGlobals(Globals globals) {
         globals.set("Log", CoerceJavaToLua.coerce(Log.class));
+        globals.set("Items", CoerceJavaToLua.coerce(Items.class));
+        globals.set("Liquids", CoerceJavaToLua.coerce(Liquids.class));
+        globals.set("UnitTypes", CoerceJavaToLua.coerce(UnitTypes.class));
         globals.set("Vars", CoerceJavaToLua.coerce(Vars.class));
         globals.set("Core", CoerceJavaToLua.coerce(Core.class));
         globals.set("Events", CoerceJavaToLua.coerce(Events.class));
