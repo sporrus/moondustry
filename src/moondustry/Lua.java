@@ -14,6 +14,7 @@ public class Lua {
     public static void infuseGlobals(Globals globals) {
         globals.set("Log", CoerceJavaToLua.coerce(Log.class));
         globals.set("Items", CoerceJavaToLua.coerce(Items.class));
+        globals.set("Blocks", CoerceJavaToLua.coerce(Blocks.class));
         globals.set("Liquids", CoerceJavaToLua.coerce(Liquids.class));
         globals.set("UnitTypes", CoerceJavaToLua.coerce(UnitTypes.class));
         globals.set("Vars", CoerceJavaToLua.coerce(Vars.class));
