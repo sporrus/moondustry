@@ -11,4 +11,4 @@ example: cons(function (c) <do something with c> end) returns a Cons object
 use extend to extend classes
 usage: extend(Class, Table, Constructor params...)
 table contains key / value pairs to change block values
-example: extend(Wall, {health = 938, requirements = {ItemStack:new(Items.copper, 10}, buildVisibility = BuildVisibility.shown}, "gorodmi-wall"}
+example: extend(Wall, {health = 938, requirements = {ItemStack:new(Items.copper, 10}, buildVisibility = BuildVisibility.shown}, "gorodmi-wall")
