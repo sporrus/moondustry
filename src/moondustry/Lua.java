@@ -6,6 +6,7 @@ import arc.util.*;
 import mindustry.*;
 import mindustry.content.*;
 import mindustry.game.*;
+import mindustry.gen.*;
 import mindustry.world.*;
 import mindustry.world.consumers.*;
 import mindustry.world.meta.*;
@@ -25,6 +26,7 @@ public class Lua {
         globals.set("UnitTypes", CoerceJavaToLua.coerce(UnitTypes.class));
         globals.set("Vars", CoerceJavaToLua.coerce(Vars.class));
         globals.set("Core", CoerceJavaToLua.coerce(Core.class));
+        globals.set("Call", CoerceJavaToLua.coerce(Call.class));
         globals.set("Events", CoerceJavaToLua.coerce(Events.class));
         globals.set("EventType", CoerceJavaToLua.coerce(EventType.class));
         globals.set("WorldLoadEvent", CoerceJavaToLua.coerce(EventType.WorldLoadEvent.class));
