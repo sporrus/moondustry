@@ -12,8 +12,6 @@ public class Main extends Mod{
     public final Seq<LuaMod> mods = new Seq<>();
 
     public Main(){
-        Log.info("Loaded ExampleJavaMod constructor.");
-
         // death
         Fi luaMods = Vars.dataDirectory.child("luamods");
         luaMods.mkdirs();
@@ -23,11 +21,15 @@ public class Main extends Mod{
 
     @Override
     public void init() {
+        Log.info("Initializing mods...");
         mods.each(LuaMod::callInit);
+        Log.info("Mods initialized!");
     }
 
     @Override
     public void loadContent(){
+        Log.info("Loading content...");
         mods.each(LuaMod::callLoad);
+        Log.info("Content loaded!");
     }
 }
