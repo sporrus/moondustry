@@ -22,7 +22,7 @@ public class LuaMod {
         try {
             globals.get("init").call();
         } catch (Exception e) {
-            Log.err("Mod " + root.absolutePath() + " doesnt have init function!");
+            Log.err("Mod " + root.name() + " doesnt have init function!");
             Log.err(e);
         }
     }
@@ -31,7 +31,7 @@ public class LuaMod {
         try {
             globals.get("load").call();
         } catch (Exception e) {
-            Log.err("Mod " + root.absolutePath() + " doesnt have load function!");
+            Log.err("Mod " + root.name() + " doesnt have load function!");
             Log.err(e);
         }
     }
