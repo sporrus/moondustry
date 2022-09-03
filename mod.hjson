@@ -4,5 +4,5 @@ author: "gorodmi & Mythril"
 main: "moondustry.Main"
 description: "Lua mod loader."
 version: 1.0.0
-minGameVersion: 136
+minGameVersion: 138
 java: true
