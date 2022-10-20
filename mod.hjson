@@ -1,8 +1,8 @@
 displayName: "Moondustry"
 name: "moondustry"
-author: "gorodmi & Mythril"
+author: "sporrus"
 main: "moondustry.Main"
 description: "Lua mod loader."
 version: 1.0.0
-minGameVersion: 138
+minGameVersion: 139
 java: true
