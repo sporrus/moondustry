@@ -24,9 +24,9 @@ allprojects{
 }
 
 dependencies{
-    compileOnly "com.github.anuken.arc:arc-core:v139"
-    compileOnly "com.github.anuken.mindustryjitpack:core:v139"
-    implementation 'org.luaj:luaj-jse:3.0.1'
+    compileOnly "com.github.anuken.arc:arc-core:v145.1"
+    compileOnly "com.github.anuken.mindustry:core:v145.1"
+    implementation 'org.luaj:luaj-jse:3.0.2'
 
     annotationProcessor "com.github.Anuken:jabel:93fde537c7"
 }
