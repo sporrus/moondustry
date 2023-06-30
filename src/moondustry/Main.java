@@ -9,27 +9,23 @@ import mindustry.mod.*;
 import java.io.*;
 
 public class Main extends Mod{
-    public final Seq<LuaMod> mods = new Seq<>();
+    public final LuaMod luaStuff;
 
     public Main(){
-        // death
-        Fi luaMods = Vars.dataDirectory.child("luamods");
-        luaMods.mkdirs();
-        for (Fi mod : luaMods.list(File::isDirectory))
-            mods.add(new LuaMod(mod));
+        luaStuff = new LuaMod(Vars.tree.get("assets/lua"));
     }
 
     @Override
     public void init() {
-        Log.info("Initializing mods...");
+        Log.info("(LUA) Initializing files...");
         mods.each(LuaMod::callInit);
-        Log.info("Mods initialized!");
+        Log.info("(LUA) Files initialized!");
     }
 
     @Override
     public void loadContent(){
-        Log.info("Loading content...");
+        Log.info("(LUA) Loading content...");
         mods.each(LuaMod::callLoad);
-        Log.info("Content loaded!");
+        Log.info("(LUA) Content loaded!");
     }
 }
