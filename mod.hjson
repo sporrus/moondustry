@@ -5,5 +5,5 @@ main: moondustry.Main
 description: Funny lua.
 subtitle: v2.0.0
 version: 2.0.0
-minGameVersion: 139
+minGameVersion: 145.1
 java: true
