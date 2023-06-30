@@ -1,8 +1,9 @@
-displayName: "Moondustry"
-name: "moondustry"
-author: "sporrus"
-main: "moondustry.Main"
-description: "Lua mod loader."
-version: 1.0.0
+displayName: Moondustry
+name: moondustry
+author: sporrus
+main: moondustry.Main
+description: Funny lua.
+subtitle: v2.0.0
+version: 2.0.0
 minGameVersion: 139
 java: true
